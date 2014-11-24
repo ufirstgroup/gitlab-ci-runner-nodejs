@@ -1,4 +1,8 @@
 language: ruby
+cache:
+  - bundler
+  - apt
+
 script:
   - chmod u+x test.sh
   - ./test.sh
