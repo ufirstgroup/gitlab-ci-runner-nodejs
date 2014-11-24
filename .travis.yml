@@ -1,7 +1,12 @@
 language: ruby
+
 cache:
   - bundler
   - apt
+  
+env:
+  global:
+    secure: "mEUS3uINNI4bJ7OFMQ/rEL8XffwGksERhRMnp9I2laC0Ul9TA3CNc1BZCZXi8cTSWcXHJizMP+R/eDUQdOpfWlwe+maAaR9JkHEaJNEM3pyN5S4VoUWiDy+snyRP48vAF9nzoQW4jf51v0tc6yucHApfEXDgiOlj8g9BE93IVe8="
 
 script:
   - chmod u+x test.sh
