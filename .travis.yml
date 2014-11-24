@@ -6,7 +6,11 @@ cache:
   
 env:
   global:
-    secure: "mEUS3uINNI4bJ7OFMQ/rEL8XffwGksERhRMnp9I2laC0Ul9TA3CNc1BZCZXi8cTSWcXHJizMP+R/eDUQdOpfWlwe+maAaR9JkHEaJNEM3pyN5S4VoUWiDy+snyRP48vAF9nzoQW4jf51v0tc6yucHApfEXDgiOlj8g9BE93IVe8="
+    CI_SERVER_URL: 'http://ci0.mean.io'
+    GITLAB_SERVER_FQDN: 'git.mean.io'
+    secure: "Fx9WtIPqfqBjAwLqVpYaaJmVzzBJ1B5lvU2krTU2fJev9oZZlyypp4oqKRqkmx0zBapkC7HJLQE5dyS17UIEK4dRnF6EQE4NJb3vHbfJE0SJ+3WPsJXY1vFgCNZRUfjhnw1SnZOBI8/CgTrXQINeEy2UElN3A6Wdk87yTsW+CFs="
+
+
 
 script:
   - chmod u+x test.sh
