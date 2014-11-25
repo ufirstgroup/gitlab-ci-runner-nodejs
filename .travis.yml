@@ -9,6 +9,13 @@ env:
     secure: "Fx9WtIPqfqBjAwLqVpYaaJmVzzBJ1B5lvU2krTU2fJev9oZZlyypp4oqKRqkmx0zBapkC7HJLQE5dyS17UIEK4dRnF6EQE4NJb3vHbfJE0SJ+3WPsJXY1vFgCNZRUfjhnw1SnZOBI8/CgTrXQINeEy2UElN3A6Wdk87yTsW+CFs="
 
 
+matrix:
+  fast_finish: true
+  
+branches:
+  only:
+    - master
+
 script:
   - chmod u+x test.sh
   - ./test.sh
