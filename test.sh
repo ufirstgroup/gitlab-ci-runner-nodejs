@@ -19,6 +19,7 @@ sudo apt-get install lxc-docker
 
 
 deamon(){
+sudo service docker status
 sudo service docker start
 }
 
@@ -37,7 +38,7 @@ steps(){
     install
     deamon &
     while :;do
-        sudo service docker status && break
+        sudo service docker status && break || ( echo is docker alive ?  )
         sleep 1
     done;
     instance
