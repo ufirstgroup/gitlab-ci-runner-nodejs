@@ -15,10 +15,9 @@ branches:
   only:
     - master
 
+
+  
 script:
-  - ./test0.sh
-  
-  
-script1:
   - chmod u+x *.sh . -R
-  - ./test.sh
+  - ./test0.sh
+#  - ./test.sh
