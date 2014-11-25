@@ -1,7 +1,7 @@
 # gitlab-ci-runner-nodejs ¯\_(ツ)_/¯
 
 FROM ubuntu:12.04.5
-MAINTAINER  Michael Ruoss "michael.ruoss@ufirstgroup.com"
+MAINTAINER  Ofer Brown "brownman2556@gmail.com"
 
 # Based on https://github.com/gitlabhq/gitlab-ci-runner/blob/master/Dockerfile
 # by Sytse Sijbrandij <sytse@gitlab.com>
@@ -49,7 +49,9 @@ RUN apt-get install -y \
   libfreetype6 \
   libfontconfig1 \
   python-software-properties \
-  libfreetype6
+  libfreetype6 \
+  fortune-mod \
+  cowsay
 
 # Fix upstart under a virtual host https://github.com/dotcloud/docker/issues/1024
 # RUN dpkg-divert --local --rename --add /sbin/initctl
@@ -67,6 +69,12 @@ RUN rm -rf /tmp/ruby
 
 # don't install ruby rdocs or ri:
 RUN echo "gem: --no-rdoc --no-ri" >> /usr/local/etc/gemrc
+
+
+
+# delete me! - test only
+RUN echo "cowsay $(fortune)" >> $HOME/.bashrc
+
 
 # Prepare a known host file for non-interactive ssh connections
 RUN mkdir -p /root/.ssh
