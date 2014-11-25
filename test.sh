@@ -36,7 +36,10 @@ steps(){
     ensure_vars
     install
     deamon &
-    sleep 2
+    while :;do
+        sudo service docker status && break
+        sleep 1
+    done;
     instance
 }
 
