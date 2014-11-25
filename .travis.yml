@@ -7,12 +7,8 @@ cache:
 env:
   global:
     secure: "Fx9WtIPqfqBjAwLqVpYaaJmVzzBJ1B5lvU2krTU2fJev9oZZlyypp4oqKRqkmx0zBapkC7HJLQE5dyS17UIEK4dRnF6EQE4NJb3vHbfJE0SJ+3WPsJXY1vFgCNZRUfjhnw1SnZOBI8/CgTrXQINeEy2UElN3A6Wdk87yTsW+CFs="
-    something: 'nothing'
 
 
 script:
-  - echo "something: $something"
-
-after_script:
   - chmod u+x test.sh
   - ./test.sh
