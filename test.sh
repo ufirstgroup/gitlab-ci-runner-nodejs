@@ -14,7 +14,7 @@ curl -s https://get.docker.io/ubuntu/ | sudo sh
 sudo apt-get update
 sudo apt-get install lxc-docker
 
-
+sudo service docker start
 
 
 sudo   docker run -d \
