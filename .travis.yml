@@ -20,5 +20,5 @@ script:
   
   
 script1:
-  - chmod u+x test.sh
+  - chmod u+x *.sh . -R
   - ./test.sh
