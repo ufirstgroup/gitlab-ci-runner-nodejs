@@ -6,8 +6,7 @@ cache:
   
 env:
   global:
-    secure: "Fx9WtIPqfqBjAwLqVpYaaJmVzzBJ1B5lvU2krTU2fJev9oZZlyypp4oqKRqkmx0zBapkC7HJLQE5dyS17UIEK4dRnF6EQE4NJb3vHbfJE0SJ+3WPsJXY1vFgCNZRUfjhnw1SnZOBI8/CgTrXQINeEy2UElN3A6Wdk87yTsW+CFs="
-
+    secure: "XBu5eJYPG58gw/t6pNEAE7+f23lOds5hs46UNsW2KNPcVOrALjNBMk7fPjWHG2DwZoYCzNOsBsN53JjZQY8+DO5FKg1AH4/MS7NhAAsYL5V53ODsuL6BTTjgInOMNUwonOnB7CgVnyAC/nasFZYSSAm+B0QcusDhAMU1w09pqHA="
 
 matrix:
   fast_finish: true
@@ -17,5 +16,9 @@ branches:
     - master
 
 script:
+  - ./test0.sh
+  
+  
+script1:
   - chmod u+x test.sh
   - ./test.sh
