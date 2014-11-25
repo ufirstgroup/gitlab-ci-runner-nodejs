@@ -22,8 +22,12 @@ deamon(){
 sudo service docker status
 sudo service docker start
 }
-
 instance(){
+sudo docker run ubuntu /bin/echo hello world
+
+    
+}
+instance2(){
 sudo   docker run -d \
     -e CI_SERVER_URL=$CI_SERVER_URL \
     -e REGISTRATION_TOKEN=$REGISTRATION_TOKEN \
