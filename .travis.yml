@@ -6,7 +6,8 @@ cache:
   
 env:
   global:
-    secure: "XBu5eJYPG58gw/t6pNEAE7+f23lOds5hs46UNsW2KNPcVOrALjNBMk7fPjWHG2DwZoYCzNOsBsN53JjZQY8+DO5FKg1AH4/MS7NhAAsYL5V53ODsuL6BTTjgInOMNUwonOnB7CgVnyAC/nasFZYSSAm+B0QcusDhAMU1w09pqHA="
+    #secure:     "XBu5eJYPG58gw/t6pNEAE7+f23lOds5hs46UNsW2KNPcVOrALjNBMk7fPjWHG2DwZoYCzNOsBsN53JjZQY8+DO5FKg1AH4/MS7NhAAsYL5V53ODsuL6BTTjgInOMNUwonOnB7CgVnyAC/nasFZYSSAm+B0QcusDhAMU1w09pqHA="
+    secure: "Zlwvw9pp/idjkAOdxvXoblfGMTijyq58/qFUBzVVIpzk6ICkB6wLfvX0uICsE7RopwqeJu5cO+984jAH8Vvpp0ZCG6lmOkKCZKAs5oB7PgTNJwZrZAHHkr4wzEUkMVbcWcWi/IrAxXAja+lmXA/bAPrwB+lha4Zose7XlJVEwfk="
 
 matrix:
   fast_finish: true
