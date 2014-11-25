@@ -1,7 +1,10 @@
 #!/bin/bash
-
 set -u
-set -e
+
+
+source config.cfg
+
+#ENSURE VARS
 test -v CI_SERVER_URL
 test -v REGISTRATION_TOKEN
 test -v GITLAB_SERVER_FQDN
