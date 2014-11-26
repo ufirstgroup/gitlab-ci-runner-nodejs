@@ -49,9 +49,9 @@ RUN apt-get install -y \
   libfreetype6 \
   libfontconfig1 \
   python-software-properties \
-  libfreetype6 \
-  fortune-mod \
-  cowsay
+  libfreetype6 
+  #fortune-mod \
+  #cowsay
 
 # Fix upstart under a virtual host https://github.com/dotcloud/docker/issues/1024
 # RUN dpkg-divert --local --rename --add /sbin/initctl
@@ -73,7 +73,7 @@ RUN echo "gem: --no-rdoc --no-ri" >> /usr/local/etc/gemrc
 
 
 # delete me! - test only
-RUN echo "cowsay $(fortune)" >> $HOME/.bashrc
+#RUN echo "cowsay $(fortune)" >> $HOME/.bashrc
 
 
 # Prepare a known host file for non-interactive ssh connections
