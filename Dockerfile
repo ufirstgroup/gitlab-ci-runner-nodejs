@@ -55,7 +55,8 @@ RUN apt-get install -y \
   libfontconfig1 \
   python-software-properties \
   libfreetype6 \
-  sudo
+  sudo \
+  tree
   #fortune-mod \
   #cowsay
 
@@ -107,25 +108,23 @@ RUN gem install compass sass
 # RUN cd /tmp/node  && ./configure && make && make install
 # RUN rm -rf /tmp/node
 
-RUN wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh
-
-RUN ["/bin/bash","-i","-l","-c","nvm install 0.10"]
-#RUN ["/bin/bash","-i","-l","-c","nvm install 0.11"]
-RUN ["/bin/bash","-i","-l","-c","nvm alias default 0.10"]
+ 
+ADD . /docker
 
 
-# update npm and install some basics
-RUN ["/bin/bash","-i","-l","-c","npm update -g npm"]
-RUN ["/bin/bash","-i","-l","-c","npm install -g grunt grunt-cli bower jshint jsxhint"]
+#update permission for our scripts
+RUN chmod +x /docker/SH/*.sh
 
+
+#install node through nvm
+ CMD    ["/bin/bash","/docker/SH/nodejs.sh"]
 
 #try installing mongodb using external file
-ADD . /docker
-RUN chmod +x /docker/SH/mongodb.sh
+#RUN chmod +x /docker/SH/mongodb.sh
 CMD    ["/bin/bash","/docker/SH/mongodb.sh"]
 
 #try installing meanio dependencies
-RUN chmod +x /docker/SH/meanio.sh
+#RUN chmod +x /docker/SH/meanio.sh
 CMD    ["/bin/bash","/docker/SH/meanio.sh"]
 
 
