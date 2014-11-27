@@ -3,6 +3,32 @@
 FROM ubuntu:12.04.5
 MAINTAINER  Ofer Brown "brownman2556@gmail.com"
 
+
+
+# Install MongoDB.
+RUN \
+  apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10 && \
+  echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' > /etc/apt/sources.list.d/mongodb.list && \
+  apt-get update && \
+  apt-get install -y mongodb-org && \
+  rm -rf /var/lib/apt/lists/*
+
+# Define mountable directories.
+VOLUME ["/data/db"]
+
+# Define working directory.
+WORKDIR /data
+
+# Define default command.
+CMD ["mongod"]
+
+# Expose ports.
+#   - 27017: process
+#   - 28017: http
+EXPOSE 27017
+EXPOSE 28017
+
+
 # Based on https://github.com/gitlabhq/gitlab-ci-runner/blob/master/Dockerfile
 # by Sytse Sijbrandij <sytse@gitlab.com>
 
@@ -103,7 +129,7 @@ RUN ["/bin/bash","-i","-l","-c","nvm alias default 0.10"]
 
 # update npm and install some basics
 RUN ["/bin/bash","-i","-l","-c","npm update -g npm"]
-RUN ["/bin/bash","-i","-l","-c","npm install -g grunt grunt-cli bower jshint jsxhint"]
+RUN ["/bin/bash","-i","-l","-c","npm install -g grunt grunt-cli bower jshint jsxhint mean-cli"]
 
 # When the image is started add the remote server key, install the runner and run it
 WORKDIR /gitlab-ci-runner
