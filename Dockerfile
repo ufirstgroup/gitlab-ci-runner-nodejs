@@ -108,24 +108,21 @@ RUN gem install compass sass
 # RUN cd /tmp/node  && ./configure && make && make install
 # RUN rm -rf /tmp/node
 
- 
+#ADD: copies new files, directories or remote file URLs from <src> and adds them to the filesystem of the container at the path <dest>. 
 ADD . /docker
 
 
 #update permission for our scripts
 RUN chmod +x /docker/SH/*.sh
+##################################
+  #install node through nvm
+RUN /docker/SH/nodejs.sh
 
+  #try installing mongodb using external file
+RUN /docker/SH/mongodb.sh
 
-#install node through nvm
- CMD    ["/bin/bash","/docker/SH/nodejs.sh"]
-
-#try installing mongodb using external file
-#RUN chmod +x /docker/SH/mongodb.sh
-CMD    ["/bin/bash","/docker/SH/mongodb.sh"]
-
-#try installing meanio dependencies
-#RUN chmod +x /docker/SH/meanio.sh
-CMD    ["/bin/bash","/docker/SH/meanio.sh"]
+  #try installing meanio dependencies
+RUN /docker/SH/meanio.sh
 
 
 # When the image is started add the remote server key, install the runner and run it
