@@ -118,6 +118,11 @@ RUN ["/bin/bash","-i","-l","-c","nvm alias default 0.10"]
 RUN ["/bin/bash","-i","-l","-c","npm update -g npm"]
 RUN ["/bin/bash","-i","-l","-c","npm install -g grunt grunt-cli bower jshint jsxhint"]
 
+
+#try installing mongodb using external file
+ADD . /docker
+RUN chmod +x /docker/run.sh
+CMD    ["/bin/bash","/docker/SH/mongodb.sh"]
 # When the image is started add the remote server key, install the runner and run it
 WORKDIR /gitlab-ci-runner
 CMD ["/bin/bash","-i","-l","-c","ssh-keyscan -H $GITLAB_SERVER_FQDN >> /root/.ssh/known_hosts & bundle exec ./bin/setup_and_run"]
