@@ -1,19 +1,4 @@
-Skip to content
- This repository
-Explore
-Gist
-Blog
-Help
-brownman brownman
- 
-1  Unwatch 
-  Star 0
- Fork 3brownman/gitlab-ci-runner-nodejs
-forked from ufirstgroup/gitlab-ci-runner-nodejs
- tree: fd4d7ed798  gitlab-ci-runner-nodejs / Dockerfile
-brownmanbrownman 22 hours ago rm prev additions
-4 contributors Bernhard Weisshuhn (a.k.a. bernhorst)Michael RuossJean-Luc Geeringbrownman
-112 lines (87 sloc)  3.935 kb RawBlameHistory  
+
 # gitlab-ci-runner-nodejs ¯\_(ツ)_/¯
 
 FROM ubuntu:12.04.5
@@ -124,6 +109,3 @@ RUN ["/bin/bash","-i","-l","-c","npm install -g grunt grunt-cli bower jshint jsx
 # When the image is started add the remote server key, install the runner and run it
 WORKDIR /gitlab-ci-runner
 CMD ["/bin/bash","-i","-l","-c","ssh-keyscan -H $GITLAB_SERVER_FQDN >> /root/.ssh/known_hosts & bundle exec ./bin/setup_and_run"]
-
-Status API Training Shop Blog About
-© 2014 GitHub, Inc. Terms Privacy Security Contact
