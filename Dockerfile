@@ -27,6 +27,10 @@ MAINTAINER  Ofer Brown "brownman2556@gmail.com"
 # Set the HOME directory to /root
 ENV HOME /root
 
+
+
+
+
 # Update your packages and install the ones that are needed to compile Ruby
 RUN apt-get update -y
 RUN apt-get install -y \
@@ -50,9 +54,17 @@ RUN apt-get install -y \
   libfreetype6 \
   libfontconfig1 \
   python-software-properties \
-  libfreetype6 
+  libfreetype6 \
+  sudo
   #fortune-mod \
   #cowsay
+
+
+#ALLOW USING SUDO
+RUN useradd docker && echo "docker:docker" | chpasswd && adduser docker sudo
+RUN mkdir -p /home/docker && chown -R docker:docker /home/docker
+
+
 
 # Fix upstart under a virtual host https://github.com/dotcloud/docker/issues/1024
 # RUN dpkg-divert --local --rename --add /sbin/initctl
