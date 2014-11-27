@@ -25,7 +25,7 @@ MAINTAINER  Ofer Brown "brownman2556@gmail.com"
 # docker build -no-cache -t codingforce/gitlab-ci-runner-nodejs github.com/bkw/gitlab-ci-runner-nodejs
 
 # Set the HOME directory to /root
-ENV HOME /root
+ENV HOME /home
 
 
 
