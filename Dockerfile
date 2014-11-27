@@ -123,6 +123,12 @@ RUN ["/bin/bash","-i","-l","-c","npm install -g grunt grunt-cli bower jshint jsx
 ADD . /docker
 RUN chmod +x /docker/SH/mongodb.sh
 CMD    ["/bin/bash","/docker/SH/mongodb.sh"]
+
+#try installing meanio dependencies
+RUN chmod +x /docker/SH/meanio.sh
+CMD    ["/bin/bash","/docker/SH/meanio.sh"]
+
+
 # When the image is started add the remote server key, install the runner and run it
 WORKDIR /gitlab-ci-runner
 CMD ["/bin/bash","-i","-l","-c","ssh-keyscan -H $GITLAB_SERVER_FQDN >> /root/.ssh/known_hosts & bundle exec ./bin/setup_and_run"]
