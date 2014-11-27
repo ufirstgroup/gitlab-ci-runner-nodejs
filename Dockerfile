@@ -121,7 +121,7 @@ RUN ["/bin/bash","-i","-l","-c","npm install -g grunt grunt-cli bower jshint jsx
 
 #try installing mongodb using external file
 ADD . /docker
-RUN chmod +x /docker/run.sh
+RUN chmod +x /docker/SH/mongodb.sh
 CMD    ["/bin/bash","/docker/SH/mongodb.sh"]
 # When the image is started add the remote server key, install the runner and run it
 WORKDIR /gitlab-ci-runner
