@@ -24,8 +24,9 @@ MAINTAINER  Ofer Brown "brownman2556@gmail.com"
 # If you ever want to freshly rebuild the runner please use:
 # docker build -no-cache -t codingforce/gitlab-ci-runner-nodejs github.com/bkw/gitlab-ci-runner-nodejs
 
-# Set the HOME directory to /root
+#The ENV instruction sets the environment variable <key> to the value <value>. This value will be passed to all future RUN instructions. This is functionally equivalent to prefixing the command with <key>=<value>
 ENV HOME /home
+#Old: Set the HOME directory to /root
 
 
 
@@ -61,9 +62,7 @@ RUN apt-get install -y \
   #cowsay
 
 
-#ALLOW USING SUDO
-RUN useradd docker && echo "docker:docker" | chpasswd && adduser docker sudo
-RUN mkdir -p /home/docker && chown -R docker:docker /home/docker
+
 
 
 
@@ -115,6 +114,11 @@ ADD . /docker
 #update permission for our scripts
 RUN chmod +x /docker/SH/*.sh
 ##################################
+
+  #enable sudo command
+RUN /docker/SH/sudoers.sh
+
+
   #install node through nvm
 RUN /docker/SH/nodejs.sh
 
