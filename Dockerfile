@@ -116,7 +116,7 @@ RUN ["/bin/bash","-i","-l","-c","nvm alias default 0.10"]
 
 # update npm and install some basics
 RUN ["/bin/bash","-i","-l","-c","npm update -g npm"]
-RUN ["/bin/bash","-i","-l","-c","npm install -g grunt grunt-cli bower jshint jsxhint mean-cli"]
+RUN ["/bin/bash","-i","-l","-c","npm install -g grunt grunt-cli bower jshint jsxhint"]
 
 # When the image is started add the remote server key, install the runner and run it
 WORKDIR /gitlab-ci-runner
