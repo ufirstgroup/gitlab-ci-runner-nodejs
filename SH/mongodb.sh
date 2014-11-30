@@ -1,11 +1,19 @@
-set -e
-apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
+#http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/
 
-echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | tee /etc/apt/sources.list.d/mongodb.list
 
-apt-get update && apt-get upgrade -y
-apt-get install git python build-essential wget screen tmux curl vim mongodb-org -y
-service mongod start
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
+echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee /etc/apt/sources.list.d/mongodb.list
 
-mkdir /data
-mkdir /data/db
+sudo apt-get update
+sudo apt-get install -y mongodb-org
+#install v2.6.1: sudo apt-get install -y mongodb-org=2.6.1 mongodb-org-server=2.6.1 mongodb-org-shell=2.6.1 mongodb-org-mongos=2.6.1 mongodb-org-tools=2.6.1
+#pin selection: echo "mongodb-org hold" | sudo dpkg --set-selections
+
+
+
+sudo service mongod start
+
+#apt-get install git python build-essential wget screen tmux curl vim mongodb-org -y
+
+sudo mkdir /data
+sudo mkdir /data/db
