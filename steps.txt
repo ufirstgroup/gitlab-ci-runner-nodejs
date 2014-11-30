@@ -5,6 +5,7 @@ nodejs:  ./SH/nodejs.sh           #install using nvm
 env_nvm: source ./CFG/nvm.cfg     #env: load nvm
 npm:  ./SH/npm.sh                 #install npm modules
 mean:    ./SH/meanio.sh
+
 mean_add_package: ./SH/mean_add_package.sh
 
 #install the gitlab c.i runner
