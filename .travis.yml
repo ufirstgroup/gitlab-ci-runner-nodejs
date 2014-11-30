@@ -21,4 +21,4 @@ script:
   - chmod u+x *.sh . -R
   #- ./test0.sh
   #- ./test.sh
-  - ./docker_steps.sh
+  - ./steps.sh
