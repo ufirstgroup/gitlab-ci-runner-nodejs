@@ -29,4 +29,4 @@ done < <(cat steps.txt)
 }
 
 run
-return 0
+exit 0
