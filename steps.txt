@@ -1,6 +1,6 @@
 permissions: chmod +x ./SH/*.sh
-apt: ./SH/apt.sh          #install linux deps
 sudoers: ./SH/sudoers.sh          #enable sudo command
+apt: ./SH/apt.sh          #install linux deps
 nodejs:  ./SH/nodejs.sh           #install using nvm
 mongodb: ./SH/mongodb.sh
 mean:    ./SH/meanio.sh
