@@ -64,14 +64,10 @@ ADD . /docker
 RUN chmod +x /docker/SH/*.sh
 ##################################
 
-  #enable sudo command
+#enable sudo command
 RUN /docker/SH/sudoers.sh
 
- # - chmod u+x *.sh . -R
-  #- ./test0.sh
-  #- ./test.sh
-  #- 
-  #try installing meanio dependencies
+
 #RUN sudo -E su $LOGNAME
 RUN bash -c /docker/steps.sh
 #/docker/SH/steps.sh
