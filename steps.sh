@@ -3,8 +3,10 @@
  commander(){
  local args=( $@ ) 
  local cmd="${args[@]}"
+ echo 
  echo "[CMD] $cmd"
- eval "$cmd" 1>/tmp/out 2>/tmp/err || { exit 1; }
+ eval "$cmd" 1>/tmp/out 2>/tmp/err || { cat /tmp/err; exit 1; }
+ echo
  }
  
 breaking(){
