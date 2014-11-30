@@ -12,4 +12,11 @@ grunt &
 
 
 
-mean search gmap
+
+
+while :;do
+curl 0.0.0.0:3000 && break
+sleep 1000
+done
+
+#mean search gmap
