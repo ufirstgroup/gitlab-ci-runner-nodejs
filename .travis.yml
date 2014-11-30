@@ -19,6 +19,7 @@ branches:
   
 script:
   - chmod u+x *.sh . -R
+  - sudo su
   #- ./test0.sh
   #- ./test.sh
   - ./steps.sh
