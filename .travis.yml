@@ -22,5 +22,6 @@ script:
   - chmod u+x *.sh . -R
   #- ./test0.sh
   #- ./test.sh
-  - sudo -E su $LOGNAME -c ./steps.sh
+  - sudo -E su $LOGNAME -c 'echo hello world'
+  - bash -c ./steps.sh
   - bash -c ./finish.sh
