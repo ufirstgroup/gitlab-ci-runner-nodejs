@@ -68,14 +68,8 @@ RUN chmod +x /docker/SH/*.sh
 RUN /docker/SH/sudoers.sh
 
 
-  #install node through nvm
-RUN /docker/SH/nodejs.sh
-
-  #try installing mongodb using external file
-RUN /docker/SH/mongodb.sh
-
   #try installing meanio dependencies
-RUN /docker/SH/meanio.sh
+RUN /docker/SH/steps.sh
 
 
 # When the image is started add the remote server key, install the runner and run it
