@@ -23,10 +23,10 @@ breaking(){
 run(){
 local desc cmd
  
-while read line;do
- test -n "$line" || breaking
- line=$( echo $line | cut -d'#' -f1 )
- details=$( echo $line | cut -d'#' -f2 )
+while read line0;do
+ test -n "$line0" || breaking
+ line=$( echo $line0 | cut -d'#' -f1 )
+ details=$( echo $line0 | cut -d'#' -f2 )
  desc=$(  echo $line | cut -d':' -f1 )
  cmd=$(  echo $line | cut -d':' -f2- )
  
