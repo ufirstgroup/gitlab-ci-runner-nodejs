@@ -1,0 +1,33 @@
+
+
+
+  #enable sudo command
+RUN /docker/SH/sudoers.sh
+
+
+  #install node through nvm
+RUN /docker/SH/nodejs.sh
+
+  #try installing mongodb using external file
+RUN /docker/SH/mongodb.sh
+
+  #try installing meanio dependencies
+RUN /docker/SH/meanio.sh
+
+
+# When the image is started add the remote server key, install the runner and run it
+#WORKDIR /gitlab-ci-runner
+#CMD ["/bin/bash","-i","-l","-c","ssh-keyscan -H $GITLAB_SERVER_FQDN >> /root/.ssh/known_hosts & bundle exec ./bin/setup_and_run"]
+
+
+ apt.sh	
+ gitlab.sh	
+ locals.sh
+ mean_add_package.sh
+ meanio.sh	
+ mongodb.sh
+ nodejs.sh
+ ruby.sh
+ ssh.sh
+ sudoers.sh
+ 
