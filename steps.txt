@@ -1,58 +1,23 @@
 permissions: chmod +x ./SH/*.sh
+apt: ./SH/apt.sh          #install linux deps
+sudoers: ./SH/sudoers.sh          #enable sudo command
+nodejs:  ./SH/nodejs.sh           #install using nvm
+mongodb: ./SH/mongodb.sh
+mean:    ./SH/meanio.sh
+mean_add_package: ./SH/mean_add_package.sh
 
+#install the gitlab c.i runner
+locals: ./SH/locals.sh
+ruby: ./SH/ruby.sh 
+ssh:  ./SH/ssh.sh
+gitlab: ./SH/gitlab.sh	
 
-
-#update permission for our scripts
- step 
-##################################
-
-  #enable sudo command
- step sudoers ./SH/sudoers.sh
-
-
-  #install node through nvm
- step nodejs ./SH/nodejs.sh
-
-  #try installing mongodb using external file
- step mongodb ./SH/mongodb.sh
-
-  #try installing meanio dependencies
- step mean-framework ./SH/meanio.sh
-
-
- step mean-packabe ./SH/mean_add_package.sh
  
- 
-
-
-
-  #enable sudo command
-RUN /docker/SH/sudoers.sh
-
-
-  #install node through nvm
-RUN /docker/SH/nodejs.sh
-
-  #try installing mongodb using external file
-RUN /docker/SH/mongodb.sh
-
-  #try installing meanio dependencies
-RUN /docker/SH/meanio.sh
-
 
 # When the image is started add the remote server key, install the runner and run it
 #WORKDIR /gitlab-ci-runner
 #CMD ["/bin/bash","-i","-l","-c","ssh-keyscan -H $GITLAB_SERVER_FQDN >> /root/.ssh/known_hosts & bundle exec ./bin/setup_and_run"]
 
 
- apt.sh	
- gitlab.sh	
- locals.sh
- mean_add_package.sh
- meanio.sh	
- mongodb.sh
- nodejs.sh
- ruby.sh
- ssh.sh
- sudoers.sh
  
+  
