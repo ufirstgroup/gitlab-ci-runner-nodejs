@@ -1,5 +1,6 @@
 #ADD: copies new files, directories or remote file URLs from <src> and adds them to the filesystem of the container at the path <dest>. 
-mkdir /docker
+sudo su -
+sudo mkdir /docker
 mv SH /docker
 
 
