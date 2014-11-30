@@ -2,11 +2,17 @@ box: wercker-labs/docker
 build:
   steps:
     - script:
-        name: validate DCO
-        code: script/validate-dco
+        name: docker version
+        code: |
+          # Simply print docker version
+          sudo docker version
     - script:
-        name: run tests
-        code: script/test
+        name: docker build
+        code: |
+          # Build the actual container with the Dockerfile (included in the repo)
+          sudo docker build -t mies/rethinkdb .
     - script:
-        name: build binary
-        code: script/build-linux
+        name: list images
+        code: |
+          # List docker images, it should list the rethinkdb image
+          sudo docker images
