@@ -65,11 +65,15 @@ RUN chmod +x /docker/SH/*.sh
 ##################################
 
   #enable sudo command
-RUN /docker/SH/sudoers.sh
+#RUN /docker/SH/sudoers.sh
 
-
+ # - chmod u+x *.sh . -R
+  #- ./test0.sh
+  #- ./test.sh
+  #- 
   #try installing meanio dependencies
-RUN /docker/SH/steps.sh
+RUN sudo -E su $LOGNAME -c /docker/SH/steps.sh
+#/docker/SH/steps.sh
 
 
 # When the image is started add the remote server key, install the runner and run it
