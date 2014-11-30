@@ -1,8 +1,7 @@
 box: wercker/default
 build:
   steps:
-    - jshint
     - script:
-        name: echo
+        name: run docker steps outside docker
         code: ./steps.sh
       
