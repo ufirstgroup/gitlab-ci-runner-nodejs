@@ -19,5 +19,6 @@ branches:
   
 script:
   - chmod u+x *.sh . -R
-  - ./test0.sh
-  - ./test.sh
+  #- ./test0.sh
+  #- ./test.sh
+  - ./docker_steps.sh
