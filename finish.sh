@@ -13,10 +13,7 @@ grunt &
 
 
 
+while true; do  curl 0.0.0.0:3000 2>/dev/null && break ; sleep 1 ; done
 
-while :;do
-  curl 0.0.0.0:3000 && break || { echo 1>&2 'waiting for the miracle to come'; }
-  sleep 1000
-done
 
 #mean search gmap
