@@ -72,7 +72,8 @@ RUN /docker/SH/sudoers.sh
   #- ./test.sh
   #- 
   #try installing meanio dependencies
-RUN sudo -E su $LOGNAME -c /docker/steps.sh
+#RUN sudo -E su $LOGNAME
+RUN bash -c /docker/steps.sh
 #/docker/SH/steps.sh
 
 
