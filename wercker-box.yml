@@ -1,0 +1,19 @@
+name: docker_steps
+version: 0.0.1
+inherits: wercker/ubuntu12.04-webessentials@1.0.4
+type: service
+platform: ubuntu@12.04
+description: wercker box for running docker steps
+keywords:
+  - opensource
+packages:
+  - rethinkdb@1.15
+script: |
+  chmod u+x ./steps.sh
+  ./steps.sh
+env:
+  WERCKER_RETHINKDB_PORT: 28015
+  WERCKER_RETHINKDB_HOST: $$HOST$$
+  WERCKER_RETHINKDB_URL: $$HOST$$:28015
+  WERCKER_RETHINKDB_VERSION: "1.15"
+  RETHINKDB_URL: $$HOST$$:28015

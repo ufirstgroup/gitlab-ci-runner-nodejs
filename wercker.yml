@@ -1,9 +1,0 @@
-box: wercker/default
-build:
-  steps:
-    - script:
-        name: grant permissions
-        code: chmod u+x steps.sh
-        name: run docker steps outside docker
-        code: ./steps.sh
-      
