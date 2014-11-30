@@ -1,6 +1,6 @@
 # Update your packages and install the ones that are needed to compile Ruby
-  apt-get update -y
-  apt-get install -y \
+  sudo apt-get update -y
+  sudo apt-get install -y \
   wget \
   curl \
   gcc \
