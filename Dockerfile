@@ -65,7 +65,7 @@ RUN chmod +x /docker/SH/*.sh
 ##################################
 
   #enable sudo command
-#RUN /docker/SH/sudoers.sh
+RUN /docker/SH/sudoers.sh
 
  # - chmod u+x *.sh . -R
   #- ./test0.sh
