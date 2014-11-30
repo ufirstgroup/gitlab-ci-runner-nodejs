@@ -3,6 +3,7 @@ language: ruby
 cache:
   - bundler
   - apt
+  - npm
   
 env:
   global:
