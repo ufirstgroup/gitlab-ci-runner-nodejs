@@ -1,9 +1,11 @@
 permissions: chmod +x ./SH/*.sh
 apt: ./SH/apt.sh                  #install linux deps
+mongodb: ./SH/mongodb.sh
+
+
 nodejs:  ./SH/nodejs.sh           #install using nvm
 env_nvm: source ./CFG/nvm.cfg     #env: load nvm
 npm:  ./SH/npm.sh                 #install npm modules
-mongodb: ./SH/mongodb.sh
 mean:    ./SH/meanio.sh
 mean_add_package: ./SH/mean_add_package.sh
 
