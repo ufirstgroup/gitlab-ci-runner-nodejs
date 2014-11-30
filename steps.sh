@@ -29,7 +29,8 @@ while read line;do
  cmd=$(  echo $line | cut -d':' -f2- )
  
  echo "[DESC] $desc"
- commander $cmd
+ set +e
+ commander "$cmd" 
 done < <(cat steps.txt)
 }
 
