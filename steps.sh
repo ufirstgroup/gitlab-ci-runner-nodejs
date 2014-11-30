@@ -25,11 +25,12 @@ local desc cmd
  
 while read line;do
  test -n "$line" || breaking
- line=$( echo $line  )
+ line=$( echo $line | cut -d'#' -f1 )
+ details=$( echo $line | cut -d'#' -f2 )
  desc=$(  echo $line | cut -d':' -f1 )
  cmd=$(  echo $line | cut -d':' -f2- )
  
- echo "[DESC] $desc"
+ echo "[$desc] $details"
  set +e
  commander "$cmd" 
 done < <(cat steps.txt)
