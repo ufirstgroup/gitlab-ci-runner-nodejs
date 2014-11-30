@@ -1,6 +1,6 @@
 permissions: chmod +x ./SH/*.sh
 apt: ./SH/apt.sh                  #install linux deps
-mongodb: sudo ./SH/mongodb.sh     #install mongodb - ubuntu method
+mongodb: ./SH/mongodb.sh     #install mongodb - ubuntu method
 nodejs:  ./SH/nodejs.sh           #install using nvm
 env_nvm: source ./CFG/nvm.cfg     #env: load nvm
 npm:  ./SH/npm.sh                 #install npm modules
