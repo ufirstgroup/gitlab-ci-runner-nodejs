@@ -1,9 +1,12 @@
 #ADD: copies new files, directories or remote file URLs from <src> and adds them to the filesystem of the container at the path <dest>. 
-
+ print_line(){
+  echo 1>&2 '---------------------------------'
+ }
+ 
  commander(){
  local args=( $@ ) 
  local cmd="${args[@]}"
- echo 
+ print_line
  echo "[CMD] $cmd"
  eval "$cmd" 1>/tmp/out 2>/tmp/err || { cat /tmp/err; exit 1; }
  echo
