@@ -1,11 +1,12 @@
 permissions: chmod +x ./SH/*.sh             #all .sh are executable
 apt: ./SH/apt.sh                            #install linux deps
-mongodb: ./SH/mongodb.sh                    #install mongodb - ubuntu method
 nodejs:  ./SH/nodejs.sh                     #install using nvm
 env_nvm: source ./CFG/nvm.cfg               #env: load nvm
 npm:  ./SH/npm.sh                           #install npm modules
 mean:    ./SH/meanio.sh                     #mean: following user instruction for generating a new mean-application
 mean-scaffold:    ./SH/mean_scaffold.sh     #creating a new mean-application at: /tmp
+
+mongodb: ./SH/mongodb.sh                    #install mongodb - ubuntu method
 
 
 mean_add_package: ./SH/mean_add_package.sh
