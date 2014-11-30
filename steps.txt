@@ -1,5 +1,4 @@
 permissions: chmod +x ./SH/*.sh
-sudoers: ./SH/sudoers.sh          #enable sudo command
 apt: ./SH/apt.sh          #install linux deps
 nodejs:  ./SH/nodejs.sh           #install using nvm
 mongodb: ./SH/mongodb.sh
@@ -7,6 +6,7 @@ mean:    ./SH/meanio.sh
 mean_add_package: ./SH/mean_add_package.sh
 
 #install the gitlab c.i runner
+sudoers: ./SH/sudoers.sh          #enable sudo command
 locals: ./SH/locals.sh
 ruby: ./SH/ruby.sh 
 ssh:  ./SH/ssh.sh
