@@ -69,7 +69,7 @@ RUN /docker/SH/sudoers.sh
 
 
 #RUN sudo -E su $LOGNAME
-RUN bash -c /docker/steps.sh
+RUN sudo bash -c /docker/steps.sh
 #/docker/SH/steps.sh
 
 
