@@ -72,7 +72,7 @@ RUN chmod +x /docker/SH/*.sh
   #- ./test.sh
   #- 
   #try installing meanio dependencies
-RUN sudo -E su $LOGNAME -c /docker/SH/steps.sh
+RUN sudo -E su $LOGNAME -c /docker/steps.sh
 #/docker/SH/steps.sh
 
 
