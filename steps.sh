@@ -7,7 +7,7 @@
  local args=( $@ ) 
  local cmd="${args[@]}"
  print_line
- echo "[CMD] $cmd"
+ echo ">>>> $cmd"
  eval "$cmd" 1>/tmp/out 2>/tmp/err || { print_line; cat /tmp/out; print_line; cat /tmp/err; exit 1; }
  echo
  }
