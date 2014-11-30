@@ -25,6 +25,7 @@ local desc cmd
  
 while read line;do
  test -n "$line" || breaking
+ line=$( echo $line  )
  desc=$(  echo $line | cut -d':' -f1 )
  cmd=$(  echo $line | cut -d':' -f2- )
  
