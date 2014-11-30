@@ -25,7 +25,7 @@ MAINTAINER  Ofer Brown "brownman2556@gmail.com"
 # docker build -no-cache -t codingforce/gitlab-ci-runner-nodejs github.com/bkw/gitlab-ci-runner-nodejs
 
 #The ENV instruction sets the environment variable <key> to the value <value>. This value will be passed to all future RUN instructions. This is functionally equivalent to prefixing the command with <key>=<value>
-ENV HOME /home
+ENV HOME /root
 #Old: Set the HOME directory to /root
 
 
