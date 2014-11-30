@@ -4,8 +4,7 @@
 
 
 
-https://circleci.com/gh/:owner/:repo/tree/:branch.svg?style=shield&circle-token=:circle-token
-
+ 
 
 
 gitlab-ci-runner-nodejs
