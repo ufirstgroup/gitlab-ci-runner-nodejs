@@ -21,4 +21,5 @@ script:
   - chmod u+x *.sh . -R
   #- ./test0.sh
   #- ./test.sh
-  - sudo -E su $LOGNAME -c ./steps.sh
+  - sudo -E su $LOGNAME -
+  - bash -c ./steps.sh
