@@ -21,8 +21,8 @@ intro
 source $dir_root/CFG/helper.cfg
 source $dir_root/CFG/config.cfg
 
-
-chmod u+x $dir_root/*.sh . -R
+#FIX PERMISSION
+chmod u+x *.sh $dir_root/ -R
 
 #RUN
 sudo -E su $LOGNAME -c 'echo hello world'
