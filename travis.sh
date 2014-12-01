@@ -1,3 +1,6 @@
+#!/usr/bin/env
+
+
 set -u
 export MODE_DEBUG=${MODE_DEBUG:-false}
 export dir_root="$PWD"
