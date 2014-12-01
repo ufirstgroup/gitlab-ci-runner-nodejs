@@ -50,7 +50,7 @@ source $dir_root/CFG/config.cfg
 chmod u+x *.sh $dir_root -R
 
 #RUN
-sudo -E su $LOGNAME -c 'echo hello world'
+#sudo -E su $LOGNAME -c 'echo hello world'
 bash -c $dir_root/steps.sh
 }
 
