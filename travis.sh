@@ -5,7 +5,7 @@ trap_err(){
 }
 
 set -u
-trap trap_err ERR
+#trap trap_err ERR
 export dir_root=$PWD
 #{dir_root:-$PWD}
 
