@@ -16,3 +16,4 @@ Runner for gitlab-ci **using docker** with a fresh node.js, npm and phantom.js i
 links
 ----
 - [travis + docker](https://github.com/lukecyca/travis-docker-example)
+- [docker Makefile](https://github.com/sameersbn/docker-gitlab-ci/edit/master/Makefile)
