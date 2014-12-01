@@ -1,0 +1,1 @@
+sudoers: ./SH/sudoers.sh          #enable sudo command
