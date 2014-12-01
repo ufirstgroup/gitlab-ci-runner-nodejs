@@ -21,14 +21,14 @@ while read line0;do
  
  echo "[$desc] $details"
  set +e
- trace commander "$cmd" 
+ commander "$cmd" 
 done < <( cat $file )
 }
 
 all(){
 local str
 while read line;do
- commander single "$line" 
+  single "$line" 
 done < <(cat $dir_root/steps.txt)
 }
 
