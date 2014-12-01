@@ -1,6 +1,7 @@
 #ADD: copies new files, directories or remote file URLs from <src> and adds them to the filesystem of the container at the path <dest>. 
 
 set -u
+STEPPER='commander'
 
 single(){
 local desc cmd str file
@@ -21,7 +22,7 @@ while read line0;do
  
  echo "[$desc] $details"
  set +e
- mute "$cmd" 
+ ${STEPPER} "$cmd" 
 done < <( cat $file )
 }
 
