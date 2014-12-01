@@ -15,5 +15,5 @@ sudo service mongod start
 
 #apt-get install git python build-essential wget screen tmux curl vim mongodb-org -y
 
-sudo mkdir /data
-sudo mkdir /data/db
+sudo mkdir $dir_data
+sudo mkdir $dir_data/db
