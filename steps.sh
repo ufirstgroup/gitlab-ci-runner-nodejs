@@ -30,7 +30,7 @@ done < <( cat $file )
 all(){
 local str
 while read line;do
-  commander single "$line" 
+  single "$line" 
 done < <(cat $dir_root/steps.txt)
 }
 
