@@ -5,6 +5,8 @@ MAINTAINER sameer@damagehead.com
 
 ADD . /docker
 RUN chmod 755 /docker/travis.sh
+RUN export dir_root='/docker'
+RUN /docker/DKR/sudoers.sh
 RUN /docker/travis.sh
 
 #ADD assets/setup/ /app/setup/
