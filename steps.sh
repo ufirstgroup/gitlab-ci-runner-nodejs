@@ -51,7 +51,7 @@ local str
 while read line;do
  str=$( echo $line  | tr  '[a-z]'   '[A-Z]' )
  commander single "$str" 
-done < <(cat $DIR_FIRST/steps.txt)
+done < <(cat $dir_root/steps.txt)
 }
 
 
