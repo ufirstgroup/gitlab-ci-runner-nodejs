@@ -4,8 +4,8 @@
 [![Build Status](https://snap-ci.com/brownman/gitlab-ci-runner-nodejs/branch/master/build_image)](https://snap-ci.com/brownman/gitlab-ci-runner-nodejs/branch/master)
 
 
- structure
- ====
+structure
+====
  
  ```bash
  MEAN/   #install mean using npm + scaffold new dir + [[[  DO WHATEVER WE NEED TO TEST OUR PACKAGE-REPOSITORY]]]
