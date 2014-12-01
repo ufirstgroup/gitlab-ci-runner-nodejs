@@ -1,1 +1,1 @@
-sudoers: ./SH/sudoers.sh          #enable sudo command
+sudoers: ./DKR/sudoers.sh          #enable sudo command
