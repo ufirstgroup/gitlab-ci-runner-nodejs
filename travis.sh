@@ -16,6 +16,8 @@ fi
 trap_err(){
   echo $FUNCNAME
   echo $?
+  cat1 /tmp/out
+  cat1 /tmp/err
   exit 1
 }
 intro(){
