@@ -21,7 +21,7 @@ while read line0;do
  
  echo "[$desc] $details"
  set +e
- commander "$cmd" 
+ tracxe commander "$cmd" 
 done < <( cat $file )
 }
 
