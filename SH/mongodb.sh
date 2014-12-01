@@ -1,3 +1,4 @@
+#we want gitlab_ci_runner user to be of group: mongodb
 #http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/
 
 
