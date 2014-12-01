@@ -1,27 +1,36 @@
-# gitlab-ci-runner-nodejs
+[![Build Status](https://travis-ci.org/brownman/gitlab-ci-runner-nodejs.svg?branch=master)](https://travis-ci.org/brownman/gitlab-ci-runner-nodejs)
+[![Circle CI](https://circleci.com/gh/brownman/gitlab-ci-runner-nodejs.svg?style=svg)](https://circleci.com/gh/brownman/gitlab-ci-runner-nodejs)
 
-This is docker image based on the Dockerfile provided by gitlabhq. See https://github.com/gitlabhq/gitlab-ci-runner/blob/master/Dockerfile by Sytse Sijbrandij <sytse@gitlab.com> for the original.
 
-Differences from the original:
+structure
+====
+ 
+ ```bash
+ CFG/    #assign directory names and use permissions
+ MEAN/   #install mean using npm + scaffold new dir + [[[  DO WHATEVER WE NEED TO TEST OUR PACKAGE-REPOSITORY]]]
+ SH/     #install ubuntu machine packages + ruby + nodejs
+ DKR/    #docker only:  Exposing ports 
+ GITLAB/ #c.i runner:   Clone the repo + Use ruby to run it
+ ```
 
-- no mysql
-- no postgres
-- no redis
-- current stable node.js with npm, phantom.js, grunt-cli, bower, jshint and jsxhint
 
-# Installation
+gitlab-ci-runner-nodejs
+=======================
 
-This image is available as a [Trusted Build](https://index.docker.io/u/ufirstgroup/gitlab-ci-runner-nodejs/). Import the build like this:
+Runner for gitlab-ci **using docker** with a fresh node.js, npm and phantom.js install
 
-    docker pull ufirstgroup/gitlab-ci-runner-nodejs
+questions
+===
+- how to let the gitlab user to access the mongoDB service ?
+```bash
+#example: postgresql 
++#CMD ssh-keyscan -H $GITLAB_SERVER_FQDN >> /root/.ssh/known_hosts && mysqld & /root/redis-stable/src/redis-server & /etc/init.d/postgresql start & bundle exec ./bin/setup_and_run
+```
 
-# Usage
-Run like this:
 
-    % docker run -d \
-        -e CI_SERVER_URL=https://ci.example.com \
-        -e REGISTRATION_TOKEN=replaceme \
-        -e HOME=/root \
-        -e GITLAB_SERVER_FQDN=gitlab.example.com \
-        ufirstgroup/gitlab-ci-runner-nodejs
 
+links
+----
+- [travis + docker](https://github.com/lukecyca/travis-docker-example)
+- [docker Makefile](https://github.com/sameersbn/docker-gitlab-ci/edit/master/Makefile)
+- [rm code from Dockerfile](https://github.com/sameersbn/docker-gitlab-ci-runner)

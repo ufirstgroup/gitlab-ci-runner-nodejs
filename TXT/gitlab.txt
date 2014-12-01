@@ -1,0 +1,3 @@
+mkdir: ./GITLAB/mkdir.sh
+ssh:  ./GITLAB/ssh.sh
+gitlab: ./GITLAB/gitlab.sh

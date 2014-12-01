@@ -1,0 +1,22 @@
+apt: ./SH/apt.sh                            #install linux deps
+mongodb: ./SH/mongodb.sh                    #install mongodb - ubuntu method
+nodejs:  ./SH/nodejs.sh                     #install using nvm
+env_nvm: source ./CFG/nvm.cfg               #env: load nvm
+npm:  ./SH/npm.sh                           #install npm modules
+locals: ./SH/locals.sh                      #set system locals
+
+ruby: ./SH/ruby.sh                          #install ruby
+
+
+
+#install the gitlab c.i runner
+
+ 
+
+# When the image is started add the remote server key, install the runner and run it
+#WORKDIR /gitlab-ci-runner
+#CMD ["/bin/bash","-i","-l","-c","ssh-keyscan -H $GITLAB_SERVER_FQDN >> /root/.ssh/known_hosts & bundle exec ./bin/setup_and_run"]
+
+
+ 
+  

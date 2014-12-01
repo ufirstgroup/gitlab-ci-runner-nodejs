@@ -1,0 +1,1 @@
+sudoers: ./DKR/sudoers.sh          #enable sudo command
