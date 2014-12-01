@@ -3,10 +3,18 @@ trap_err(){
   echo $?
   exit 1
 }
+intro(){
+echo "[dir_root] $dir_root"
+echo ----
+ls $dir_root
+echo ----
+}
 
 set -u
 #trap trap_err ERR
-export dir_root=$PWD
+export dir_root="$PWD"
+intro
+
 #{dir_root:-$PWD}
 
 #LOAD
