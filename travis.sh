@@ -3,7 +3,15 @@
 
 set -u
 export MODE_DEBUG=${MODE_DEBUG:-true}
-export dir_root=${dir_root:-"$PWD"}
+
+
+where_am_i(){
+local file=$1
+cd $( dirname $file );
+echo $PWD
+}
+
+export dir_root=${dir_root:-"$( where_am_i $0 )"}
 
 
 
@@ -20,11 +28,12 @@ trap_err(){
   cat1 /tmp/err
   exit 1
 }
+
 intro(){
 echo "[dir_root] $dir_root"
-echo ----
+echo =======================
 ls $dir_root
-echo ----
+echo =======================
 }
 
 run(){
