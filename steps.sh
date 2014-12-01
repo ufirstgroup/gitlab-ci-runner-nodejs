@@ -1,11 +1,11 @@
 #ADD: copies new files, directories or remote file URLs from <src> and adds them to the filesystem of the container at the path <dest>. 
 
-
+set -u
 
 single(){
 local desc cmd str file
 str=$1
-file="$DIR_FIRST/STEPS/${str}.txt"
+file="$dir_root/STEPS/${str}.txt"
 test -f $file || { echo no file; exit 1; }
 
 print_line
