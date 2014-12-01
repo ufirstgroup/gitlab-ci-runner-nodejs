@@ -11,3 +11,8 @@ gitlab-ci-runner-nodejs
 =======================
 
 Runner for gitlab-ci **using docker** with a fresh node.js, npm and phantom.js install
+
+
+links
+----
+- [travis + docker](https://github.com/lukecyca/travis-docker-example)
