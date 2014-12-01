@@ -19,6 +19,15 @@ gitlab-ci-runner-nodejs
 
 Runner for gitlab-ci **using docker** with a fresh node.js, npm and phantom.js install
 
+questions
+===
+- how to let the gitlab user to access the mongoDB service ?
+```bash
+#example: postgresql 
++#CMD ssh-keyscan -H $GITLAB_SERVER_FQDN >> /root/.ssh/known_hosts && mysqld & /root/redis-stable/src/redis-server & /etc/init.d/postgresql start & bundle exec ./bin/setup_and_run
+```
+
+
 
 links
 ----
