@@ -10,7 +10,7 @@ file="$dir_root/TXT/${str}.txt"
 test -f $file || { trace "[$file] file not found"; exit 1; }
 
 print_line
-cat -n $file 
+cat1  $file 
 print_line
 
 while read line0;do
