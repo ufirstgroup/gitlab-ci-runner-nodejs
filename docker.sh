@@ -1,5 +1,9 @@
+#how to run it?
 #https://github.com/bkw/gitlab-ci-runner-nodejs
 
+#install gitlab
+#install nvm
+#https://github.com/bkw/gitlab-ci-runner-nodejs/blob/master/Dockerfile
 
 DIR_HOME=/root
 docker pull brownman/gitlab-ci-runner-nodejs
