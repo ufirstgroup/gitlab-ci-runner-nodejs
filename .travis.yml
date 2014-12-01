@@ -22,3 +22,6 @@ branches:
 script:
   - chmod u+x ./travis.sh
   - ./travis.sh
+
+after_success:
+  - MENU/vagrant.sh
