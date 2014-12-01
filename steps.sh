@@ -5,7 +5,7 @@ set -u
 single(){
 local desc cmd str file
 str=$1
-file="$dir_root/STEPS/${str}.txt"
+file="$dir_root/TXT/${str}.txt"
 test -f $file || { trace "[$file] file not found"; exit 1; }
 
 print_line
