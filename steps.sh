@@ -1,4 +1,5 @@
-#ADD: copies new files, directories or remote file URLs from <src> and adds them to the filesystem of the container at the path <dest>. 
+#!/usr/bin/env bash
+
 
 set -u
 STEPPER=${STEPPER:-mute}
