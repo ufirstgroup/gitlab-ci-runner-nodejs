@@ -1,31 +1,6 @@
 #ADD: copies new files, directories or remote file URLs from <src> and adds them to the filesystem of the container at the path <dest>. 
 
 
-trace(){
- echo 1>&2 "[.] $@"
-}
-
- print_line(){
-  echo 1>&2 '---------------------------------'
- }
- 
- commander(){
- local args=( $@ ) 
- local cmd="${args[@]}"
- print_line
- echo ">>>> $cmd"
- eval "$cmd" 1>/tmp/out 2>/tmp/err || { print_line; cat /tmp/out; print_line; cat /tmp/err; exit 1; }
- echo
- }
- 
-breaking(){
- echo 
- echo Empty line!
- echo
- echo breaking..
- break
-}
-
 
 single(){
 local desc cmd str file
