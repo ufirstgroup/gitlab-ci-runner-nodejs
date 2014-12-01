@@ -6,7 +6,7 @@ single(){
 local desc cmd str file
 str=$1
 file="$dir_root/STEPS/${str}.txt"
-test -f $file || { trace no file; exit 1; }
+test -f $file || { trace "[$file] file not found"; exit 1; }
 
 print_line
 cat -n $file 
