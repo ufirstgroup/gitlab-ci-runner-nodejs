@@ -1,7 +1,7 @@
 #ADD: copies new files, directories or remote file URLs from <src> and adds them to the filesystem of the container at the path <dest>. 
 
 set -u
-STEPPER='commander'
+STEPPER=${STEPPER:-mute}
 
 single(){
 local desc cmd str file
