@@ -4,7 +4,15 @@
 [![Build Status](https://snap-ci.com/brownman/gitlab-ci-runner-nodejs/branch/master/build_image)](https://snap-ci.com/brownman/gitlab-ci-runner-nodejs/branch/master)
 
 
+ structure
+ ====
  
+ ```bash
+ MEAN/   #install mean using npm + scaffold new dir + [[[  DO WHATEVER WE NEED TO TEST OUR PACKAGE-REPOSITORY]]]
+ SH/     #install ubuntu machine packages + ruby + nodejs
+ DKR/    #docker only:  Exposing ports 
+ GITLAB/ #c.i runner:   Clone the repo + Use ruby to run it
+ ```
 
 
 gitlab-ci-runner-nodejs
