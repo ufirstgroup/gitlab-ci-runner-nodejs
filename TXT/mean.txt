@@ -1,0 +1,2 @@
+mean:    ./SH/meanio.sh                     #mean: following user instruction for generating a new mean-application
+mean-scaffold:    ./SH/mean_scaffold.sh     #creating a new mean-application at: /tmp
