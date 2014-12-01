@@ -1,29 +1,4 @@
-permissions: chmod +x ./SH/*.sh             #all .sh are executable
-apt: ./SH/apt.sh                            #install linux deps
-mongodb: ./SH/mongodb.sh                    #install mongodb - ubuntu method
-nodejs:  ./SH/nodejs.sh                     #install using nvm
-env_nvm: source ./CFG/nvm.cfg               #env: load nvm
-npm:  ./SH/npm.sh                           #install npm modules
-mean:    ./SH/meanio.sh                     #mean: following user instruction for generating a new mean-application
-mean-scaffold:    ./SH/mean_scaffold.sh     #creating a new mean-application at: /tmp
+sh
+mean
 
-
-
-mean_add_package: ./SH/mean_add_package.sh
-
-#install the gitlab c.i runner
-sudoers: ./SH/sudoers.sh          #enable sudo command
-locals: ./SH/locals.sh
-ruby: ./SH/ruby.sh 
-ssh:  ./SH/ssh.sh
-gitlab: ./SH/gitlab.sh	
-
- 
-
-# When the image is started add the remote server key, install the runner and run it
-#WORKDIR /gitlab-ci-runner
-#CMD ["/bin/bash","-i","-l","-c","ssh-keyscan -H $GITLAB_SERVER_FQDN >> /root/.ssh/known_hosts & bundle exec ./bin/setup_and_run"]
-
-
- 
-  
+gitlab
