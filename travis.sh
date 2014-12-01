@@ -7,8 +7,8 @@ trap_err(){
 set -u
 trap trap_err ERR
 
-source $ROOT/config.cfg
-chmod u+x $ROOT/*.sh . -R
-sudo -E su $LOGNAME -c 'echo hello world'
-bash -c $ROOT/steps.sh
-bash -c $ROOT/finish.sh
+source $DIR_ROOT/config.cfg
+chmod u+x $DIR_ROOT/*.sh . -R
+sudo -E su $USER_ADMIN -c 'echo hello world'
+bash -c $DIR_ROOT/steps.sh
+bash -c $DIR_ROOT/finish.sh
