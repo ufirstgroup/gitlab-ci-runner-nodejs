@@ -33,6 +33,10 @@ str=$1
 file="$DIR_FIRST/STEPS/${str}.txt"
 test -f $file || { echo no file; exit 1; }
 
+print_line
+cat -n $file 
+print_line
+
 while read line0;do
  test -n "$line0" || breaking
  line=$( echo $line0 | cut -d'#' -f1 )
