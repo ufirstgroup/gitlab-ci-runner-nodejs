@@ -6,7 +6,9 @@ MAINTAINER sameer@damagehead.com
 ADD . /docker
 RUN chmod 755 /docker/travis.sh
 RUN export dir_root='/docker'
-RUN /docker/DKR/sudoers.sh
+RUN test -v dir_root
+RUN echo "dir_root $dir_root" 
+#RUN /docker/DKR/sudoers.sh --> first script to run before trying to use sudo
 RUN /docker/travis.sh
 
 #ADD assets/setup/ /app/setup/
