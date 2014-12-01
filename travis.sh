@@ -1,3 +1,15 @@
+set -u
+export MODE_DEBUG=${MODE_DEBUG:-true}
+export dir_root="$PWD"
+
+
+
+set_env(){
+if [ $MODE_DEBUG = true ];then
+  trap trap_err ERR
+fi
+}
+
 trap_err(){
   echo $FUNCNAME
   echo $?
@@ -10,9 +22,8 @@ ls $dir_root
 echo ----
 }
 
-set -u
-#trap trap_err ERR
-export dir_root="$PWD"
+run(){
+set_env
 intro
 
 #{dir_root:-$PWD}
@@ -27,3 +38,7 @@ chmod u+x *.sh $dir_root -R
 #RUN
 sudo -E su $LOGNAME -c 'echo hello world'
 bash -c $dir_root/steps.sh
+}
+
+
+run
