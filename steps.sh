@@ -23,7 +23,7 @@ while read line0;do
  
  echo "[$desc] $details"
  set +e
- ${STEPPER} "$cmd" 
+ eval "$STEPPER \"$cmd\"" 
 done < <( cat $file )
 }
 
