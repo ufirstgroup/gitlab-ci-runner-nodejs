@@ -22,3 +22,8 @@ RUN /docker/travis.sh
 
 #ENTRYPOINT ["/app/init"]
 #CMD ["app:start"]
+
+# Start MongoDB
+CMD mongod --fork -f /etc/mongodb.conf \
+ && redis-server /etc/redis/redis.conf \
+ && bash
