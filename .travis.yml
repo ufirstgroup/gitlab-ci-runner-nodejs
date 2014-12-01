@@ -24,4 +24,5 @@ script:
   - ./travis.sh
 
 after_success:
+  - bash -c $dir_root/finish.sh
   - ./MENU/vagrant.sh
