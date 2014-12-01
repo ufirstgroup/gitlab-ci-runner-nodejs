@@ -2,7 +2,7 @@
 
 
 set -u
-export MODE_DEBUG=${MODE_DEBUG:-false}
+export MODE_DEBUG=${MODE_DEBUG:-true}
 export dir_root=${dir_root:-$PWD}
 
 
