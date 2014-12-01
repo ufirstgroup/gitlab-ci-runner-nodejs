@@ -1,7 +1,4 @@
-# Prepare a known host file for non-interactive ssh connections
-  mkdir -p /root/.ssh
-  touch /root/.ssh/known_hosts
-
+#1. mkdir location
 # Install the runner
   mkdir /gitlab-ci-runner && cd /gitlab-ci-runner && curl -sL https://github.com/gitlabhq/gitlab-ci-runner/archive/v5.0.0.tar.gz | tar xz --strip-components=1
 
