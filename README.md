@@ -8,6 +8,7 @@ structure
 ====
  
  ```bash
+ CFG/    #assign directory names and use permissions
  MEAN/   #install mean using npm + scaffold new dir + [[[  DO WHATEVER WE NEED TO TEST OUR PACKAGE-REPOSITORY]]]
  SH/     #install ubuntu machine packages + ruby + nodejs
  DKR/    #docker only:  Exposing ports 
