@@ -22,7 +22,7 @@ source $dir_root/CFG/helper.cfg
 source $dir_root/CFG/config.cfg
 
 #FIX PERMISSION
-chmod u+x *.sh $dir_root/ -R
+chmod u+x *.sh $dir_root -R
 
 #RUN
 sudo -E su $LOGNAME -c 'echo hello world'
