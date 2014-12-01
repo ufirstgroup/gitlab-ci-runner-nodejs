@@ -1,5 +1,5 @@
 set -u
-export MODE_DEBUG=${MODE_DEBUG:-true}
+export MODE_DEBUG=${MODE_DEBUG:-false}
 export dir_root="$PWD"
 
 
