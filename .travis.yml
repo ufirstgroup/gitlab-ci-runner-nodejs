@@ -24,4 +24,4 @@ script:
   - ./travis.sh
 
 after_success:
-  - MENU/vagrant.sh
+  - ./MENU/vagrant.sh
