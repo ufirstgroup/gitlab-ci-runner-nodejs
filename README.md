@@ -17,3 +17,4 @@ links
 ----
 - [travis + docker](https://github.com/lukecyca/travis-docker-example)
 - [docker Makefile](https://github.com/sameersbn/docker-gitlab-ci/edit/master/Makefile)
+- [rm code from Dockerfile](https://github.com/sameersbn/docker-gitlab-ci-runner)
