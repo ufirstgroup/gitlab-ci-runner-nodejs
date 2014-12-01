@@ -8,7 +8,8 @@ cache:
 env:
   global:
     secure: "cqBfVO7XKbE8MtDHGnB9O4UnMebwxNM5VtzKqFTRcHv1hTO1g/Z1d2fMkqOeLooIwtNAoqKxAvEg/PeGNKoPBKLBKI5suD24mIp2iQ9tOkyp80c4XtBvZBaios4M5cBGCpwML0I8dCj96ECyiuu6FrmwHelWQPQjmzmNC9V/mNQ="
-
+    dir_root=$HOME
+    
 matrix:
   fast_finish: true
   
